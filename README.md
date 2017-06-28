@@ -35,7 +35,7 @@ From the command line with Maven:
 
 To Deploy on Tomcat using Jenkins:
 ----------------------------------
-To deploy the war file directly to the tomcat automatically using jenkins 
+To deploy the war file directly to the tomcat automatically using jenkins <br/>
         mvn tomcat7:redeploy
 
 <p>Add the following to the pom.xml</p>
