@@ -32,23 +32,27 @@ From the command line with Maven:
 
     $ cd spring-mvc-showcase
     $ mvn tomcat7:run [-Dmaven.tomcat.port=<port no.>] (In case 8080 is busy] 
-or
-if you want to deploy yhe war file directly to the tomcat automatically using jenkins then
-mvn tomcat7:redeploy
-add the following to the pom.xml
-<plugin>
-        <groupId>org.apache.tomcat.maven</groupId>
-        <artifactId>tomcat7-maven-plugin</artifactId>
-        <version>${tomcat7-maven-plugin.version}</version>
-        <configuration>
-            <url><host-ip>/manager/text</url>
-            <server>tomcat</server>
-            <username>username</username>
-            <password>password</password>
-            <path>/${project.artifactId}</path>
-            <update>true</update>
-         </configuration>
-</plugin>
+
+To Deploy on Tomcat using Jenkins:
+----------------------------------
+To deploy the war file directly to the tomcat automatically using jenkins 
+        mvn tomcat7:redeploy
+
+<p>Add the following to the pom.xml</p>
+        &ltplugin&gt<br/>
+             &ltgroupId&gtorg.apache.tomcat.maven&lt/groupId&gt<br/>
+            &ltartifactId&gttomcat7-maven-plugin&lt/artifactId&gt<br/>
+            &ltversion&gt${tomcat7-maven-plugin.version}&lt/version&gt<br/>
+            &ltconfiguration&gt<br/>
+                &lturl&gt<host-ip>/manager/text&lt/url&gt<br/>
+                &ltserver&gttomcat&lt/server&gt<br/>
+                &ltusername&gtusername&lt/username&gt<br/>
+                &ltpassword&gtpassword&lt/password&gt<br/>
+                &ltpath&gt/${project.artifactId}&lt/path&gt<br/>
+                &ltupdate&gttrue&lt/update&gt<br/>
+            &lt/configuration&gt<br/>
+       &lt/plugin&gt <br/>
+-------------------------------------------------------------------------------------------------------------
 
 or
 
