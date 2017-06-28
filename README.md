@@ -36,10 +36,10 @@ From the command line with Maven:
 To Deploy on Tomcat using Jenkins:<br/>
 ----------------------------------
 To deploy the war file directly to the tomcat automatically using jenkins <br/>
-        mvn tomcat7:redeploy
+       <b> mvn tomcat7:redeploy </b>
 
 <p>Add the following to the pom.xml</p>
-        &ltplugin&gt<br/>
+       <b>&ltplugin&gt<br/>
              &ltgroupId&gtorg.apache.tomcat.maven&lt/groupId&gt<br/>
             &ltartifactId&gttomcat7-maven-plugin&lt/artifactId&gt<br/>
             &ltversion&gt${tomcat7-maven-plugin.version}&lt/version&gt<br/>
@@ -51,7 +51,7 @@ To deploy the war file directly to the tomcat automatically using jenkins <br/>
                 &ltpath&gt/${project.artifactId}&lt/path&gt<br/>
                 &ltupdate&gttrue&lt/update&gt<br/>
             &lt/configuration&gt<br/>
-       &lt/plugin&gt <br/>
+       &lt/plugin&gt <br/></b>
 -------------------------------------------------------------------------------------------------------------
 
 or
