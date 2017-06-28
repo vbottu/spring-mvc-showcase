@@ -32,6 +32,23 @@ From the command line with Maven:
 
     $ cd spring-mvc-showcase
     $ mvn tomcat7:run [-Dmaven.tomcat.port=<port no.>] (In case 8080 is busy] 
+or
+if you want to deploy yhe war file directly to the tomcat automatically using jenkins then
+mvn tomcat7:redeploy
+add the following to the pom.xml
+<plugin>
+        <groupId>org.apache.tomcat.maven</groupId>
+        <artifactId>tomcat7-maven-plugin</artifactId>
+        <version>${tomcat7-maven-plugin.version}</version>
+        <configuration>
+            <url><host-ip>/manager/text</url>
+            <server>tomcat</server>
+            <username>username</username>
+            <password>password</password>
+            <path>/${project.artifactId}</path>
+            <update>true</update>
+         </configuration>
+</plugin>
 
 or
 
