@@ -33,7 +33,7 @@ From the command line with Maven:
     $ cd spring-mvc-showcase
     $ mvn tomcat7:run [-Dmaven.tomcat.port=<port no.>] (In case 8080 is busy] 
 
-To Deploy on Tomcat using Jenkins:
+To Deploy on Tomcat using Jenkins:<br/>
 ----------------------------------
 To deploy the war file directly to the tomcat automatically using jenkins <br/>
         mvn tomcat7:redeploy
